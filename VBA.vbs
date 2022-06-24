@@ -184,4 +184,69 @@ Selection.Paragraphs.LineSpacingRule = wdLineSpaceExactly
  Selection.Paragraphs.LineSpacing = 28 '设置行间距固定值28
 End Sub
 
-   
+   Private Sub cmd_body_Click()
+    Selection.ClearFormatting  'clean the format pefore
+    Selection.Font.Name = "STFangsong"
+    Selection.Font.Size = 16
+    Selection.Font.Bold = False 'not bold
+    
+    Selection.ParagraphFormat.OutlineLevel = wdOutlineLevelBodyText
+    Selection.ParagraphFormat.CharacterUnitFirstLineIndent = 2 'the first line
+    Selection.ParagraphFormat.LeftIndent = CentimetersToPoints(0) '左缩进为0
+
+    Selection.ParagraphFormat.Alignment = wdAlignParagraphJustify '两端对齐
+ 
+    Selection.Paragraphs.LineSpacingRule = wdLineSpaceExactly   '设置行间距固定值28
+    Selection.Paragraphs.LineSpacing = 28 '设置行间距固定值28
+End Sub
+
+Private Sub cmd_leve2_Click()
+Selection.Font.Name = "KaiTi"
+    Selection.Font.Size = 16
+        Selection.Font.Bold = False '不加粗
+    Selection.ParagraphFormat.OutlineLevel = wdOutlineLevel2
+        Selection.ParagraphFormat.CharacterUnitFirstLineIndent = 2 '首行缩进2字符
+   Selection.Paragraphs.LineSpacingRule = wdLineSpaceExactly   '设置行间距固定值28
+ Selection.Paragraphs.LineSpacing = 28 '设置行间距固定值28
+End Sub
+
+Private Sub cmd_level1_Click()
+    Selection.Font.Name = "SimHei"
+    Selection.Font.Size = 16
+    Selection.Font.Bold = False '不加粗
+    Selection.ParagraphFormat.OutlineLevel = wdOutlineLevel1
+    Selection.ParagraphFormat.CharacterUnitFirstLineIndent = 2 '首行缩进2字符
+    Selection.ParagraphFormat.Alignment = wdAlignParagraphThaiJustify
+    Selection.Paragraphs.LineSpacingRule = wdLineSpaceExactly   '设置行间距固定值28
+    Selection.Paragraphs.LineSpacing = 28 '设置行间距固定值28
+End Sub
+
+Private Sub cmd_level3_Click()
+    Selection.Font.Name = "STFangsong"
+    Selection.Font.Size = 16
+    Selection.Font.Bold = False '不加粗
+    Selection.ParagraphFormat.OutlineLevel = wdOutlineLevel3
+    Selection.ParagraphFormat.CharacterUnitFirstLineIndent = 2 '首行缩进2字符
+    Selection.Paragraphs.LineSpacingRule = wdLineSpaceExactly   '设置行间距固定值28
+    Selection.Paragraphs.LineSpacing = 28 '设置行间距固定值28
+End Sub
+
+Private Sub cmd_level4_Click()
+    Selection.Font.Name = "STFangsong"
+    Selection.Font.Size = 16
+    Selection.Font.Bold = False '不加粗
+    Selection.ParagraphFormat.OutlineLevel = wdOutlineLevel4
+    Selection.ParagraphFormat.CharacterUnitFirstLineIndent = 2 '首行缩进2字符
+    Selection.Paragraphs.LineSpacingRule = wdLineSpaceExactly   '设置行间距固定值28
+    Selection.Paragraphs.LineSpacing = 28 '设置行间距固定值28
+End Sub
+
+Private Sub cmd_title_Click()
+    Selection.Font.Name = "Microsoft YaHei"
+    Selection.Font.Size = 22
+    Selection.Font.Bold = False '不加粗
+    Selection.ParagraphFormat.Alignment = wdAlignParagraphCenter
+    Selection.Paragraphs.LineSpacingRule = wdLineSpaceExactly   '设置行间距固定值28
+    Selection.Paragraphs.LineSpacing = 28 '设置行间距固定值28
+End Sub
+
